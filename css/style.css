@@ -231,3 +231,31 @@ nav .btn__wrapper{
 }
 
 
+/* ============== What's Different Section ===============  */
+.section__difference .container{
+    display: flex;
+}
+
+.section__difference-text h2{
+    margin-bottom: 1.5rem;
+}
+
+.section__difference-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.section__difference-item{
+    display: flex;
+    gap: 2rem;
+}
+.section__difference-item .content h3{
+    margin-bottom: 1.15rem;
+}
+.section__difference-item .digit{
+    padding: 0.45rem 0.95rem;
+    background: var(--Bright-Red);
+    color: var(--Vary-Light-Gray);
+    border-radius: 1rem;
+    font-size: 14px;
+}

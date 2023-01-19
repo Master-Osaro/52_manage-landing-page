@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5{
 header{
     position: relative;
     z-index: 5;
-    background: var(--White);
+    background: var(--Vary-Light-Gray);
 }
 
 header, .section{
@@ -78,6 +78,7 @@ header, .section{
 nav, .container{
     max-width: 1200px;
     width: 100%;
+    padding: 1rem;
 }
 
 nav, .section__wcu .container, .section__articles .container,
@@ -302,7 +303,7 @@ nav .btn__wrapper{
 }
 
 
-/* ============== Testimonial Section ===============  */
+/* ============== Simplify Section ===============  */
 .section__simplify{
     background-color: var(--Bright-Red);
     background-image: url("../images/bg-simplify-section-desktop.svg");
@@ -314,4 +315,82 @@ nav .btn__wrapper{
 }
 .section__simplify-text h2{
     color: var(--Vary-Light-Gray);
+}
+
+/* ============== Footer ===============  */
+/* ============ Footer =============== */
+footer{
+    background: var(--Dark-Blue);
+}
+
+footer .section{
+    padding: 3rem 0;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 740px) {
+    footer .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+}
+
+.logo__socials, .footer_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.footer_btn .btn__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 740px) {
+    .footer_btn .btn__wrapper{
+        justify-content: center;
+    }
+    
+}
+
+.social-links{
+    display: flex;
+    gap: 0.75rem;
+}
+
+.footer-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 740px) {
+    .footer-list{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+}
+
+.footer-list a{
+    color: var(--Vary-Light-Gray);
+    text-decoration: none;
+    transition: all .3s;
+}
+.footer-list a:hover{
+    color: var(--Lime-Green);
+}
+
+.copyright{
+    color: var(--Vary-Light-Gray);
+    text-align: end;
 }

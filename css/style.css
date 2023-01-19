@@ -56,6 +56,11 @@ h1, h2, h3, h4, h5{
     color: var(--Vary-Light-Gray);
 }
 
+.btn-simplify{
+    background: var(--Vary-Light-Gray);
+    color: var(--Bright-Red);
+}
+
 header{
     position: relative;
     z-index: 5;
@@ -294,4 +299,19 @@ nav .btn__wrapper{
 }
 .section__testimonial-item p{
     color: var(--Dark-Grayish-Blue);
+}
+
+
+/* ============== Testimonial Section ===============  */
+.section__simplify{
+    background-color: var(--Bright-Red);
+    background-image: url("../images/bg-simplify-section-desktop.svg");
+}
+.section__simplify .container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.section__simplify-text h2{
+    color: var(--Vary-Light-Gray);
 }

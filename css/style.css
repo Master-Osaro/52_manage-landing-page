@@ -259,3 +259,39 @@ nav .btn__wrapper{
     border-radius: 1rem;
     font-size: 14px;
 }
+
+/* ============== Testimonial Section ===============  */
+.section__testimonial .btn__wrapper{
+    margin-top: 3rem;
+    text-align: center;
+}
+.section__testimonial{}
+
+.section__testimonial-title{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section__testimonial-item{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.05rem;
+    background: var(--Very-Pale-Red);
+    padding: 1.5rem;
+}
+.section__testimonial-list{
+    display: flex;
+    gap: 1rem;
+}
+
+.section__testimonial-item .profile-img{
+    margin-top: -56px;
+}
+.section__testimonial-item .profile-img img{
+    height: 64px;
+    width: 64px;
+}
+.section__testimonial-item p{
+    color: var(--Dark-Grayish-Blue);
+}

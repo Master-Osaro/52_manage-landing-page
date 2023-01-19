@@ -11,14 +11,17 @@
     /* ### Primary */
 
     --Bright-Red: hsl(12, 88%, 59%);
+    --Light-Bright-Red: hsl(12, 81%, 65%);
+    --Light-Bright-Red-shadow: hsla(12, 81%, 65%, 0.3);
     --Dark-Blue: hsl(228, 39%, 23%);
+    --Dark-Blue-shadow: hsl(228, 39%, 23%,0.15);
 
     /* ### Neutral */
 
     --Dark-Grayish-Blue: hsl(227, 12%, 61%);
     --Very-Dark-Blue: hsl(233, 12%, 13%);
     --Very-Pale-Red: hsl(13, 100%, 96%);
-    --Vary-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
 
     /* ## Typography */
 
@@ -32,7 +35,7 @@ body{
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
     overflow-x: hidden;
-    color: var(--Grayish-Blue);
+    color: var(--Dark-Grayish-Blue);
 }
 
 h1, h2, h3, h4, h5{
@@ -45,25 +48,30 @@ h1, h2, h3, h4, h5{
     border-radius: 2rem;
     border: none;
     cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
 }
 
 .btn-primary{
     background: var(--Bright-Red);
-    color: var(--Vary-Light-Gray);
+    color: var(--Very-Light-Gray);
+    transition: all .3s;
+    box-shadow: 0px 2px 14px 4px var(--Light-Bright-Red-shadow);
 }
 .btn-primary:hover{
-    background: var(--Bright-Red);
-    color: var(--Vary-Light-Gray);
+    background: var(--Light-Bright-Red);
+    color: var(--Very-Light-Gray);
 }
 
 .btn-simplify{
-    background: var(--Vary-Light-Gray);
+    background: var(--Very-Light-Gray);
     color: var(--Bright-Red);
+    box-shadow: 0px 2px 14px 4px var(--Dark-Blue-shadow);
 }
 
 header{
     position: relative;
-    background: var(--Vary-Light-Gray);
+    background: var(--Very-Light-Gray);
 }
 
 header, .section{
@@ -118,7 +126,7 @@ nav .logo{
         left: 0;
         width: 100%;
         padding: 2rem;
-        background:  linear-gradient(to bottom, var(--Dark-Blue), transparent);
+        background:  linear-gradient(to bottom,transparent,  var(--Dark-Blue-shadow), transparent);
         min-height: 110vh;
         
     }
@@ -145,10 +153,10 @@ nav .btn__wrapper{
     .nav-list{
         flex-direction: column;
         gap: 2rem;
-        padding: 1rem 2rem;
+        padding: 2rem;
         align-items: center;
         width: 100%;
-        background: var(--Vary-Light-Gray);
+        background: var(--Very-Light-Gray);
         border-radius: 0.5rem;
     }
 }
@@ -156,7 +164,7 @@ nav .btn__wrapper{
 
 .nav-link{
     text-decoration: none;
-    color: var(--Grayish-Blue);
+    color: var(--Dark-Blue);
     display: block;
     padding: 2rem 0;
     border-bottom: 2px solid transparent;
@@ -167,11 +175,12 @@ nav .btn__wrapper{
 @media screen and (max-width: 740px) {
     .nav-link{
         padding: 0; 
+        font-weight: 700;
     }
 }
 
 .nav-link:hover{
-    border-bottom: 2px solid var(--Dark-Blue);
+    color: var(--Dark-Grayish-Blue);
 }
 
 /* Mobile Menu */
@@ -336,12 +345,17 @@ nav .btn__wrapper{
 /* ============== What's Different Section ===============  */
 .section__difference .container{
     display: flex;
+    position: relative;
 }
 
 @media screen and (max-width: 740px) {
     .section__difference .container{
         flex-direction: column;
     }
+}
+
+.section__difference-text{
+    position: relative;
 }
 
 .section__difference-text h2{
@@ -355,6 +369,7 @@ nav .btn__wrapper{
 }
 
 .section__difference-list{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -369,9 +384,28 @@ nav .btn__wrapper{
 .section__difference-item .digit{
     padding: 0.45rem 0.95rem;
     background: var(--Bright-Red);
-    color: var(--Vary-Light-Gray);
+    color: var(--Very-Light-Gray);
     border-radius: 1rem;
     font-size: 14px;
+}
+
+.section__difference-bg{
+    position: absolute;
+    height: 100%;
+    bottom:  -150px;
+    left: -250px;
+    z-index: 0;
+}
+
+
+@media screen and (max-width: 740px) {
+    .section__difference-bg {
+        left: unset;
+        top:  -450px;
+        right: -500px;
+        z-index: 0;
+    }
+
 }
 
 /* ============== Testimonial Section ===============  */
@@ -436,7 +470,7 @@ nav .btn__wrapper{
     }
 }
 .section__simplify-text h2{
-    color: var(--Vary-Light-Gray);
+    color: var(--Very-Light-Gray);
 }
 
 /* ============== Footer ===============  */
@@ -470,6 +504,10 @@ footer .container{
 .form{
     display: flex;
     gap: 0.4rem;
+}
+
+.form input{
+    cursor: unset;
 }
 
 .footer__logo{
@@ -559,18 +597,18 @@ footer .container{
 }
 
 .footer-list a{
-    color: var(--Vary-Light-Gray);
+    color: var(--Very-Light-Gray);
     text-decoration: none;
     transition: all .3s;
 }
 .footer-list a:hover{
-    color: var(--Lime-Green);
+    color: var(--Bright-Red);
 }
 
 
 
 .copyright{
-    color: var(--Vary-Light-Gray);
+    color: var(--Very-Light-Gray);
     grid-column: span 1/-1;
     align-self: flex-end;
     justify-self: flex-end;

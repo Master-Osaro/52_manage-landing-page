@@ -15,6 +15,10 @@
       <div class="logo">
         <img src="./images/logo.svg" alt="">
       </div>
+      <input type="checkbox" name="mobile-menu__checkbox" id="mobile-menu__checkbox">
+      <label for="mobile-menu__checkbox" class="mobile-menu">
+        <button aria-controls="nav-list__container" aria-label="Toggle navigation" class="nav__ham-menu"></button>
+      </label>
       <div class="nav-list__container">
         <div class="nav-list">
           <a href="" class="nav-link">Pricing</a>
@@ -149,23 +153,23 @@
 <footer>
   <div class="section">
   <div class="container">
-    <div class="logo__socials">
+    <div class="footer__logo">
       <img src="./images/logo-white.svg" alt="">
-      <div class="social-links">
-        <a href="#facebook" aria-label="Facebook Link"><img src="./images/icon-facebook.svg" alt=""></a>
-        <a href="#youtube" aria-label="Youtube Link"><img src="./images/icon-youtube.svg" alt=""></a>
-        <a href="#twitter" aria-label="Twitter Link"><img src="./images/icon-twitter.svg" alt=""></a>
-        <a href="#pinterest" aria-label="Pinterest Link"><img src="./images/icon-pinterest.svg" alt=""></a>
-        <a href="#instagram" aria-label="Instagram Link"><img src="./images/icon-instagram.svg" alt=""></a>
-      </div>
     </div>
-    <div class="footer-list">
+    <div class="social-links">
+      <a href="#facebook" aria-label="Facebook Link"><img src="./images/icon-facebook.svg" alt=""></a>
+      <a href="#youtube" aria-label="Youtube Link"><img src="./images/icon-youtube.svg" alt=""></a>
+      <a href="#twitter" aria-label="Twitter Link"><img src="./images/icon-twitter.svg" alt=""></a>
+      <a href="#pinterest" aria-label="Pinterest Link"><img src="./images/icon-pinterest.svg" alt=""></a>
+      <a href="#instagram" aria-label="Instagram Link"><img src="./images/icon-instagram.svg" alt=""></a>
+    </div>
+    <div class="footer-list footer-list-1">
       <a href="#home" class="footer-link">Home</a>
       <a href="#pricing" class="footer-link">Pricing</a>
       <a href="#products" class="footer-link">Products</a>
       <a href="#About" class="footer-link">About Us</a>
     </div>
-    <div class="footer-list">
+    <div class="footer-list footer-list-2">
       <a href="#Careers" class="footer-link">Careers</a>
       <a href="#Community" class="footer-link">Community</a>
       <a href="#Policy" class="footer-link">Privacy Policy</a>
@@ -175,13 +179,22 @@
         <input type="text" placeholder="  Updates in your inbox…" class="btn">
         <button class="btn btn-primary">Go</button>
       </div>
-      
-      <p class="copyright">Copyright <script>document.write((new Date).getFullYear());</script>. All Rights Reserved</p>
     </div>
+    <p class="copyright">Copyright <script>document.write((new Date).getFullYear());</script>. All Rights Reserved</p>
   </div>
 </div>
 </footer>
-
-
+<script>
+  
+  let status = false;
+    let checkbox = document.querySelector('#mobile-menu__checkbox');
+    document.querySelector('.nav__ham-menu').addEventListener('click', (e)=>{
+      e.preventDefault();
+      status=!status;
+      checkbox.checked=status;
+    })
+    
+  
+</script>
 </body>
 </html>

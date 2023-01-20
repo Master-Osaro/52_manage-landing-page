@@ -331,7 +331,7 @@ nav .btn__wrapper{
 @media screen and (max-width: 740px) {
     .section__hero-text h1{
         margin-top: 4rem;
-        font-size: 2.15rem;
+        font-size: 2.25rem;
     }
 }
 .section__hero-text p{
@@ -346,6 +346,7 @@ nav .btn__wrapper{
 .section__difference .container{
     display: flex;
     position: relative;
+    gap: 1rem;
 }
 
 @media screen and (max-width: 740px) {
@@ -426,17 +427,28 @@ nav .btn__wrapper{
     gap: 1.05rem;
     background: var(--Very-Pale-Red);
     padding: 1.5rem;
+    border-radius: 0.5rem;
 }
 .section__testimonial-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
-    gap: 1.5rem;
+    gap: 2.5rem;
     
+}
+
+@media screen and (max-width: 946px) {
+    .section__testimonial-list{
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2.5rem;
+        
+    }
 }
 
 @media screen and (max-width: 740px) {
     .section__testimonial-list{
         grid-template-columns: 1fr;
+        gap: unset;
+        padding: 0 2.5rem;
         
     }
 }
@@ -451,6 +463,93 @@ nav .btn__wrapper{
 .section__testimonial-item p{
     color: var(--Dark-Grayish-Blue);
 }
+
+.section__testimonial-list--select{
+    display: none;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 740px) {
+    .section__testimonial-list--select{
+        display: flex;
+    }
+}
+
+
+.section__testimonial-list--select-wrapper{
+    display: flex;
+    gap: 0.5rem;
+}
+.select-testimony {
+    background: var(--Bright-Red);
+    width: 0.65rem;
+    height: 0.65rem;
+    display: inline-block;
+    border-radius: 0.35rem;
+    cursor: pointer;
+}
+
+
+.active{
+    grid-row: 1/ span 1;
+    grid-column: 1/span 1;
+}
+.next:first-child{
+    grid-row: 1/ span 1;
+    grid-column: 2/span 1;
+}
+.next:last-child{
+    grid-row: 1/ span 1;
+    grid-column: 3/span 1;
+}
+.last{
+    display: none;
+}
+
+@media screen and (max-width: 946px) {
+    .next,.section__testimonial-item{
+        display: none;
+    }
+    .active{
+        display: flex;
+        grid-row: 1/ span 1;
+        grid-column: 1/span 1;
+    }
+    
+    .last{
+        display: flex;
+        grid-row: 1/ span 1;
+        grid-column: 2/span 1;
+    }
+}
+
+
+
+
+@media screen and (max-width: 740px) {
+    .last,.next,.section__testimonial-item{
+        display: none;
+    }
+    .active{
+        display: flex;
+    }
+}
+
+.testimonial-nav{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media screen and (max-width: 740px) {
+    .testimonial-nav{
+        display: none;
+    }
+    
+}
+
 
 
 /* ============== Simplify Section ===============  */
@@ -472,6 +571,8 @@ nav .btn__wrapper{
 .section__simplify-text h2{
     color: var(--Very-Light-Gray);
 }
+
+
 
 /* ============== Footer ===============  */
 /* ============ Footer =============== */

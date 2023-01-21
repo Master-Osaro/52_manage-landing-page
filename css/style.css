@@ -32,12 +32,16 @@
 
 }
 
+
+html,
 body{
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
     color: var(--Dark-Grayish-Blue);
-    overflow-x: hidden !important;
+    position: relative;
+    overflow-x: hidden ;
 }
+
 
 h1, h2, h3, h4, h5{
     color: var(--Dark-Blue);
@@ -106,13 +110,6 @@ nav .logo{
     padding-right: 1rem;
 }
 
-/* @media screen and (max-width: 740px) {
-    nav .logo{
-        text-align: start;
-    }
-} */
-
-
 .nav-list__container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -159,6 +156,7 @@ nav .btn__wrapper{
         width: 100%;
         background: var(--Very-Light-Gray);
         border-radius: 0.5rem;
+        box-shadow: 0px 2px 30px 4px var(--Dark-Blue-shadow);
     }
 }
 
@@ -188,6 +186,7 @@ nav .btn__wrapper{
 .mobile-menu{
     display: none;
     padding: 2rem 0;
+    height: fit-content;
 }
 
 @media screen and (max-width: 740px) {
@@ -238,6 +237,7 @@ nav .btn__wrapper{
 /* ============ Hero Section =========== */
 .section__hero{
     background: var(--Very-Light-Gray);
+    position: relative;
 }
 
 .section__hero .container{
@@ -344,9 +344,6 @@ nav .btn__wrapper{
 
 
 /* ============== What's Different Section ===============  */
-.section__difference {
-    overflow: hidden;
-}
 .section__difference .container{
     display: flex;
     position: relative;

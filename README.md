@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Demo](https://easy-bank-o.netlify.app/)
+- Live Site URL: [Live Demo](https://manage-o.netlify.app/)
 
 ## My process
 

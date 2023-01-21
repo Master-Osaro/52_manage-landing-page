@@ -117,11 +117,11 @@ function checkDirection() {
     }
     }
 
-document.addEventListener('touchstart', e => {
+container.addEventListener('touchstart', e => {
     touchstartX = e.changedTouches[0].screenX
 })
 
-document.addEventListener('touchend', e => {
+container.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX
     checkDirection()
 })

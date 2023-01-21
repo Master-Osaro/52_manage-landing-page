@@ -35,8 +35,8 @@
 body{
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
-    overflow-x: hidden;
     color: var(--Dark-Grayish-Blue);
+    overflow-x: hidden !important;
 }
 
 h1, h2, h3, h4, h5{

@@ -97,7 +97,7 @@ function defineAndRemoveSliderIndicatorClasses() {
     const activeSliderIndicator = document.querySelector('.slider-indicator.active');
     activeSliderIndicator.classList.remove('active');
     currentGlobalSlider = document.querySelector('.section__testimonial-item.active').getAttribute("key");
-    console.log(currentGlobalSlider)
+    // console.log(currentGlobalSlider)
     mTestimonialSelectors[currentGlobalSlider].classList.add('active');
 }
 
